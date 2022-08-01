@@ -1,0 +1,6 @@
+main[role=main]  {
+    display: flex;
+    min-height: calc(100vh - 80px - 1em);
+    flex-direction: column;
+    justify-content: space-between;
+}
