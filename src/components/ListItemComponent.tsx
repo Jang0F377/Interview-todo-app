@@ -27,8 +27,8 @@ export const ListItemComponent : React.FC<ListItemProps> = ({todo, toggleComplet
 
 
     return(
-        <li key={todo.description} style={{background:'#fff'}} >
-            <Container className='border-primary border-3 rounded-2 shadow-sm p-1 m-1'>
+        <li key={todo.description} style={{background:'#fff',borderRadius:4}} >
+            <Container className='border-primary border-3 rounded-2 shadow-sm p-1 my-2 m-1'>
                 <Row>
                     <Col xs={10}>
                         <label style={{textDecoration : todo.isComplete ? 'line-through' : null}}>
