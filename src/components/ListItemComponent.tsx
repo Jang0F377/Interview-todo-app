@@ -27,13 +27,12 @@ export const ListItemComponent : React.FC<ListItemProps> = ({todo, toggleComplet
 
 
     return(
-        <Container className='justify-content-center'>
-            <li key={todo.description}>
-            <Container>
+        <li key={todo.description} style={{background:'#fff'}} >
+            <Container className='border-primary border-3 rounded-2 shadow-sm p-1 m-1'>
                 <Row>
-                    <Col xs={10} sm={6} lg={4}>
+                    <Col xs={10}>
                         <label style={{textDecoration : todo.isComplete ? 'line-through' : null}}>
-                            <h3>
+                            <h3 style={{marginLeft:8}}>
                                 {todo.title}
                             </h3>
                         </label>
@@ -43,7 +42,6 @@ export const ListItemComponent : React.FC<ListItemProps> = ({todo, toggleComplet
                             <input type={"checkbox"} style={{height:20,width:20}} onChange={() => toggleComplete(todo)} checked={todo.isComplete}/>
                         </label>
                     </Col>
-                    <Col xs={0} sm={4} lg={6} />
 
                 </Row>
                 <Row>
@@ -53,7 +51,6 @@ export const ListItemComponent : React.FC<ListItemProps> = ({todo, toggleComplet
                 </Row>
             </Container>
         </li>
-        </Container>
 
     );
 };
